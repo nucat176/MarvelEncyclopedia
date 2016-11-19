@@ -3,7 +3,7 @@ import {fetchCharacters, fetchCharacter} from '../actions/character_actions';
 import Characters from './characters';
 
 const mapStateToProps = state => ({
-  characters: Object.keys(state.characters).map(id => state.tracks[id])
+  characters: Object.keys(state.characters).map(id => state.characters[id])
 });
 
 const mapDispatchToProps = dispatch => ({

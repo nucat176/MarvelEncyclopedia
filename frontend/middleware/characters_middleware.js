@@ -15,7 +15,6 @@ const CharactersMiddleware = ({getState, dispatch}) => next => action => {
   let error = e => console.log(e.responseJSON);
   let receiveCharactersSuccess = characters => dispatch(receiveCharacters(characters));
   let receiveCharacterSuccess = character => dispatch(receiveCharacter(character));
-
   switch(action.type){
     case FETCH_CHARACTERS:
       fetchCharacters(receiveCharactersSuccess, error);

@@ -5,15 +5,7 @@ import {
 
 import merge from 'lodash/merge';
 
-const _defaultState = {0: {comics: [],
-                          description: "",
-                          events: {},
-                          id: 0,
-                          name: "",
-                          series: {},
-                          stories: {},
-                          thumbnail: {},
-                          urls: []}};
+const _defaultState = {};
 
 const CharactersReducer = (state = _defaultState, action) => {
   switch(action.type){
@@ -24,7 +16,7 @@ const CharactersReducer = (state = _defaultState, action) => {
       });
       return merge({}, charObj);
     case RECEIVE_CHARACTER:
-      return merge({}, state, {[action.character.id]: action.character});
+      return merge({}, state, {[action.character.data.results[0].id]: action.character.data.results[0]});
     default:
       return state;
   }

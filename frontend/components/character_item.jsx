@@ -8,13 +8,12 @@ class CharacterItem extends React.Component {
   }
 
   createImgLink(){
-    return this.props.character.thumbnail.path + '/portrait_small.' + this.props.character.thumbnail.extension;
+    return this.props.character.thumbnail.path + '/portrait_fantastic.' + this.props.character.thumbnail.extension;
   }
 
   render(){
-    console.log(this.props);
     return (
-      <li className='character-item'>
+      <li className='character-item' onClick={this.props.handleClick}>
         <h1 className='character-title'>{this.props.character.name}</h1>
         <img className='character-thumbnail' src={this.createImgLink()}/>
       </li>

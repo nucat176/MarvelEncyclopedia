@@ -1,9 +1,9 @@
 import {connect} from 'react-redux';
 import {fetchCharacters, fetchCharacter} from '../actions/character_actions';
-import Characters from './characters';
+import Character from './character';
 
 const mapStateToProps = state => ({
-  characters: Object.keys(state.characters).map(id => state.characters[id]).reverse()
+  character: state.character
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -14,4 +14,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Characters);
+)(Character);

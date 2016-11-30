@@ -3,7 +3,9 @@ import {fetchCharacters, fetchCharacter} from '../actions/character_actions';
 import Character from './character';
 
 const mapStateToProps = state => ({
-  character: state.character
+  character: state.character,
+  powers: state.powers[0],
+  abilities: state.powers[1]
 });
 
 const mapDispatchToProps = dispatch => ({

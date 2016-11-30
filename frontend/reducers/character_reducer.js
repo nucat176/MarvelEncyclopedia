@@ -1,4 +1,6 @@
-import {RECEIVE_SHOW_CHARACTER} from '../actions/character_actions';
+import {
+  RECEIVE_SHOW_CHARACTER
+} from '../actions/character_actions';
 
 import merge from 'lodash/merge';
 

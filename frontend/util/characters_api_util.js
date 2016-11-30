@@ -33,3 +33,23 @@ export const searchCharacter = (query, success, error) => {
     error
   });
 }
+
+export const getPowers = (id, success, error) => {
+  let url = "http://cors.io/?http://marvelousdb.com/character/" + `${id}`;
+  $.ajax({
+    type: "GET",
+    url: url,
+    success,
+    error
+  });
+}
+
+export const getAbilities = (id, success, error) => {
+  let url = "http://cors.io/?http://marvelousdb.com/character/" + `${id}`;
+  $.ajax({
+    type: "GET",
+    url: url,
+    success,
+    error
+  });
+}

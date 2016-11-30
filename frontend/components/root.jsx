@@ -2,7 +2,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import CharactersContainer from './characters_container';
-import {fetchCharacters, fetchCharacter, fetchShowCharacter} from '../actions/character_actions';
+import {fetchCharacters, fetchCharacter, fetchShowCharacter, getPowers, getAbilities} from '../actions/character_actions';
 import CharacterContainer from './character_container';
 import App from './app';
 
@@ -27,6 +27,7 @@ const Root = ({store}) => {
 
   const _fetchShowCharacter = (nextState) => {
     store.dispatch(fetchShowCharacter(nextState.params.id));
+    store.dispatch(getPowers(nextState.params.id));
   };
 
   return (

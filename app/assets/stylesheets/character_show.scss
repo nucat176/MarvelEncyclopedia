@@ -26,19 +26,6 @@
   align-items: center;
 }
 
-.character-description {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 25px;
-  padding: 20px;
-  font-weight: bold;
-  background-color: darkred;
-  border-radius: 5px;
-  border: 5px solid white;
-}
-
 .character-show-img {
   height: 504px;
   width: 336px;
@@ -48,8 +35,26 @@
 
 .back-to-home {
   cursor: pointer;
+  font-size: 25px;
 }
 
 .back-to-home:hover {
   text-decoration: underline;
+}
+
+.char-desc-powers {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  font-size: 18px;
+  background-color: darkred;
+  border-radius: 5px;
+  border: 5px solid white;
+}
+
+.char-label {
+  font-weight: bold;
 }

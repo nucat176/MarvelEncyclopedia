@@ -1,5 +1,4 @@
 const MD5 = require("crypto-js/md5");
-const md5 = require("js-md5");
 
 export const fetchCharacters = (success, error) => {
   let ts = Date.now().toString();

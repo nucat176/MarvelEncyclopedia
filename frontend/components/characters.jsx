@@ -33,6 +33,7 @@ class Characters extends React.Component {
             </h1>
             <SearchBar/>
           </div>
+          <h1 className="featured-chars">Featured Characters</h1>
           <ul className="characters-list">
             {this.state.characters.map(character => (
               <CharacterItem

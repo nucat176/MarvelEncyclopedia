@@ -24,7 +24,7 @@ class Characters extends React.Component {
 
   render(){
     return (
-      <section className="characters-section">
+      <section className="character-section">
         <div className="overlay">
           <div className="header-container">
             <h1 className="app-header">

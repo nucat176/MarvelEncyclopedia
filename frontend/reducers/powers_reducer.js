@@ -7,7 +7,6 @@ import merge from 'lodash/merge';
 const PowersReducer = (state = [], action) => {
   switch(action.type){
     case RECEIVE_POWERS:
-    console.log(action.powers);
       let powers = $(action.powers).find('.powers').children()[1];
       let abilities = $(action.powers).find('.abilities').children()[1];
       if (powers){

@@ -56,7 +56,7 @@ class Character extends React.Component {
   }
 
   render(){
-    return (
+      return (
       <section className='characters-section'>
         <div className='overlay'>
           <div className='character-div'>

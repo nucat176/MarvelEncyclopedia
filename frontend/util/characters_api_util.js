@@ -35,7 +35,7 @@ export const searchCharacter = (query, success, error) => {
 }
 
 export const getPowers = (id, success, error) => {
-  let url = "http://cors.io/?http://marvelousdb.com/character/" + `${id}`;
+  let url = "http://crossorigin.me/http://marvelousdb.com/character/" + `${id}`;
   $.ajax({
     type: "GET",
     url: url,
@@ -45,7 +45,7 @@ export const getPowers = (id, success, error) => {
 }
 
 export const getAbilities = (id, success, error) => {
-  let url = "http://cors.io/?http://marvelousdb.com/character/" + `${id}`;
+  let url = "http://crossorigin.me/http://marvelousdb.com/character/" + `${id}`;
   $.ajax({
     type: "GET",
     url: url,

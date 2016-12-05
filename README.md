@@ -1,43 +1,31 @@
-# README
-
 # Marvel Encyclopedia
 
-### Background
+[Marvel Encyclopedia live][heroku]
 
-Marvel Encyclopedia is a full-stack web application that serves as an interactive encyclopedia for the characters and comics of the Marvel Universe.
+[heroku]: http://marvelencyclopedia.herokuapp.com
 
-### Functionality & MVP  
+Marvel Encyclopedia is a front-end web application that interacts with the official Marvel Comics API to create the ultimate resource for finding and learning about the Marvel Comics Universe. Marvel Encyclopedia interacts with the Marvel API for character pictures, names, and descriptions, while powers and abilities are obtained by scraping the web.
 
-With Marvel Encyclopedia, users will be able to:
+## Features & Implementation
 
-- [ ] Click and view characters, comics and details from the Marvel Universe
-- [ ] Search for any comic or character to view a detail page
-- [ ] User login/signup and ability to like characters or comics
+### Basic Marvel Character Information
 
-In addition, this project will include:
+Each Marvel character's name, description, and picture were all obtained directly through Marvel's official developer API. This was my first experience working with an external API in my application, so I learned quite a bit in doing so. Marvel's API was tricky to work with. If your web application has a back-end (which this may in a future update), then you need to create an MD5 hash of the time stamp, public API key and private API key that they give you combined. This needs to be passed in as a query parameter to your API call. If your application is front-end only, as this one currently is, then you need to go to your Marvel developer account and add your application URL your list of references, and then make your API calls as normal.  
 
-- [ ] A production Readme
+### Powers and Abilities
 
-### Wireframes
+This was a bit more difficult to accomplish, given that Marvel does not provide any sort of information on character powers and abilities in its official API. Therefore, I used jQuery to scrape this information from MarvelousDB. MarvelousDB uses the official Marvel ID numbers for all of the characters in its URL's, so I simply had my application retrieve the ID from each character and append it to a MarvelousDB URL in order to scrape the powers and abilities.
 
-This app will consist of an index page that will have characters listed with thumbnail images. It was also have show pages for characters and comics and a profile page with liked items. See wireframe for an unstyle sample of the index page (already coded).
+### Hand-rolled CSS
 
-![wireframes](http://res.cloudinary.com/dfufqfnjx/image/upload/v1479704309/Screenshot_from_2016-11-20_20-57-05_ci5g46.png)
+I wanted to give Marvel Encyclopedia a great look for its users, so I created the CSS from scratch. I used a lot of flexbox to align everything the way that it is, including the cards on the home page and the information on each character's individual page.
 
-### Architecture and Technologies
+## Future Ideas for this Project
 
-This project will be implemented with the following technologies:
+### Add Comics
 
-- Vanilla JavaScript and `React/Redux`
-- HTML/CSS
-- Webpack to bundle and serve up the architecture.
+I would like to add the same structure for individual Marvel Comics as I have for characters in the universe. I would add a "Featured Comics" section to the home page as well as adding individual pages for each comic as well. I could also show the characters that appear in each comic, in addition to the comics that each character appears in.
 
-### Implementation Timeline
+### Add a Back-end for Users
 
-**Day 0**: Set up application framework. Set up index redux cycle. Set up webpack. Get the Marvel API working
-
-**Day 1-2**: Style the index page. Create a splash page. Authentication.
-
-**Day 3-4 **: Create show pages for characters and comics. Begin working on search
-
-**Day 4-5 **: Finish search. Finish likes and profile page.
+I want to add a rails back-end for users (and already have this set up), so that users may make accounts, sign in and log out, and follow characters and comics.
